@@ -2,12 +2,12 @@ import React from "react";
 import { ContainerCard, ContainDescription, ContainTitle } from "../../Style/styleAccueil"
 import Bouton from "./Bouton";
 
-function Card({ tag, titre, description, large, color, name }) {
+function Card({ children, titre, description, large, color, name, bgColor, largeButton }) {
   return <ContainerCard>
-    <p>{tag}</p>
+    {children}
     <ContainTitle large={large} color={color}>{titre}</ContainTitle>
     <ContainDescription>{description}</ContainDescription>
-    <Bouton name={name}/>
+    <Bouton name={name} bgColor={bgColor} large={largeButton}/>
   </ContainerCard>;
 }
 
