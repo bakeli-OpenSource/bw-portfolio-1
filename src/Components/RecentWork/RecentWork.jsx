@@ -14,9 +14,19 @@ function RecentWork() {
         // speed: 500,
         slidesToShow: 2,
         slidesToScroll: 2,
+        responsive: [
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: false
+              }
+            }
+          ]
       };
 
-    return <ContainerParent>
+    return <ContainerParent padding>
     <CardInfo titre={"Recent Work"} 
     description={"Solving user & business problems since last 15+ years.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
     />

@@ -10,7 +10,7 @@ export const ContainerParent = styled.div`
   padding: 4rem 12rem;
       
       @media(min-width: 320px) and (max-width: 991px){
-   padding: 3rem 1rem;
+   padding: ${(props) => (props.padding ? "3rem 2rem" : "3rem 1rem")};
   }
     @media(min-width: 992px) and (max-width: 1024px){
    padding: 3rem 5rem;
