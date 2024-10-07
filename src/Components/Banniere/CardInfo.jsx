@@ -1,9 +1,9 @@
 import React from "react";
 import { ContainerCard, ContainTitle, ContainDescription } from "../../Style/styleAccueil";
 
-function CardInfo({ titre, description }) {
-  return <ContainerCard>
-    <ContainTitle large="34px">{titre}</ContainTitle>
+function CardInfo({ titre, description, color }) {
+  return <ContainerCard alignItems>
+    <ContainTitle large="34px" color={color}>{titre}</ContainTitle>
     <ContainDescription>{description}</ContainDescription>
   </ContainerCard>;
 }

@@ -3,9 +3,8 @@ import { ContainerCardTestimonial, ContainDescription,
     ContainImgNameTesti, ContainQuote, ContainerCardTestimonialParent,
     ContainQuoteParent, ContainNameTestimonial,
     ImgTestimonial } from "../../Style/styleAccueil";
-import Picture from "../../assets/Images/photo1.png";
 
-function CardTestimonial() {
+function CardTestimonial({ Picture }) {
   return <ContainerCardTestimonialParent>
     <ContainerCardTestimonial>
     <ContainDescription>

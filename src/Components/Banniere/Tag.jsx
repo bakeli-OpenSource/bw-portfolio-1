@@ -1,9 +1,9 @@
 import React from "react";
 import { TagParagraphe } from "../../Style/styleAccueil";
 
-function Tag({name}) {
+function Tag({name, bgTag, colorTag}) {
   return <div>
-    <TagParagraphe>{name}</TagParagraphe>
+    <TagParagraphe bgColor={bgTag} color={colorTag}>{name}</TagParagraphe>
   </div>;
 }
 
