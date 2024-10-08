@@ -1,24 +1,24 @@
-import styled from "@emotion/styled";
-import { NavLink } from "react-router-dom";
-import { FaQuoteLeft } from "react-icons/fa";
-import { FaHeart } from "react-icons/fa";
+import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
 
 export const Container = styled.div`
   background: #080808;
 `;
 export const ContainerParent = styled.div`
   padding: 4rem 12rem;
-      
-      @media(min-width: 320px) and (max-width: 991px){
-   padding: ${(props) => (props.padding ? "3rem 2rem" : "3rem 1rem")};
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    padding: ${(props) => (props.padding ? '3rem 2rem' : '3rem 1rem')};
   }
-    @media(min-width: 992px) and (max-width: 1024px){
-   padding: 3rem 5rem;
+  @media (min-width: 992px) and (max-width: 1024px) {
+    padding: 3rem 5rem;
   }
 `;
 export const ContainPaddingT = styled.div`
- padding-top: ${(props) => (props.paddingTop ? "1rem" : "3rem")};
-`
+  padding-top: ${(props) => (props.paddingTop ? '1rem' : '3rem')};
+`;
 export const HeaderContainer = styled.div`
   background: #1b1b1b;
   font-weight: 400;
@@ -27,9 +27,9 @@ export const HeaderContainer = styled.div`
   margin: 0px 9.25%;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
-   
-  @media(min-width: 992px) and (max-width: 1024px){
-   padding: 24px 9px;
+
+  @media (min-width: 992px) and (max-width: 1024px) {
+    padding: 24px 9px;
     margin: 0px 7.25%;
   }
 `;
@@ -38,10 +38,10 @@ export const ContainElements = styled.div`
   justify-content: center;
   align-items: center;
   gap: 9rem;
-  
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
-   gap: 2rem;
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
+    gap: 2rem;
   }
 `;
 export const ContainElement = styled.div`
@@ -50,11 +50,11 @@ export const ContainElement = styled.div`
   align-items: center;
   gap: 70px;
 
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
   }
-   @media(min-width: 992px) and (max-width: 1024px){
-   gap: 37px;
+  @media (min-width: 992px) and (max-width: 1024px) {
+    gap: 37px;
   }
 `;
 export const ContainIcon = styled.div`
@@ -62,9 +62,9 @@ export const ContainIcon = styled.div`
   align-items: center;
   justify-content: center;
   gap: 30px;
-  
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
   }
 `;
 export const Lien = styled(NavLink)`
@@ -75,20 +75,20 @@ export const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: ${(props) => (props.alignItems ? "center" : "start")};
-  gap: ${(props) => (props.gap ? "0" : "2rem")};
-  margin: ${(props) => (props.margin ? "22px" : "0")};
-  
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
+  align-items: ${(props) => (props.alignItems ? 'center' : 'start')};
+  gap: ${(props) => (props.gap ? '0' : '2rem')};
+  margin: ${(props) => (props.margin ? '22px' : '0')};
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
   }
 `;
 export const ContainTitle = styled.p`
   font-weight: 800;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
-  font-size: ${(props) => props.large || "24px"};
-  color: ${(props) => (props.color ? "white" : "#080808")};
+  font-size: ${(props) => props.large || '24px'};
+  color: ${(props) => (props.color ? 'white' : '#080808')};
 `;
 export const ContainDescription = styled.p`
   font-size: 14px;
@@ -97,16 +97,16 @@ export const ContainDescription = styled.p`
   margin: 0;
 `;
 export const Img = styled.img`
-width: 25rem;
+  width: 25rem;
 
-@media(min-width: 320px) and (max-width: 991px){
-width: 15rem;
-}
-`
+  @media (min-width: 320px) and (max-width: 991px) {
+    width: 15rem;
+  }
+`;
 export const ContainImageBanniere = styled.div`
-display: flex;
-justify-content: center;
-`
+  display: flex;
+  justify-content: center;
+`;
 export const ContainLogo = styled.div`
   border: 1px solid #1b1b1b;
   border-radius: 6px;
@@ -121,25 +121,25 @@ export const ImgLogo = styled.img`
   min-height: 26px;
 `;
 export const Button = styled.button`
-  font-size: ${(props) => (props.large ? "16px" : "14px")};
+  font-size: ${(props) => (props.large ? '16px' : '14px')};
   color: white;
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: ${(props) => props.bgColor || "#3F8E00"};
+  background: ${(props) => props.bgColor || '#3F8E00'};
   border-radius: 4px;
   padding: 10px 24px;
-  border: solid ${(props) => props.bgColor || "#3F8E00"};
-  
-  @media(min-width: 320px) and (max-width: 991px){
+  border: solid ${(props) => props.bgColor || '#3F8E00'};
+
+  @media (min-width: 320px) and (max-width: 991px) {
   }
 `;
 export const TagParagraphe = styled.p`
-  background: ${(props) => props.bgColor || "#3F8E00"};
-  color: ${(props) => props.color || "white"};
-  border: solid ${(props) => props.bgColor || "#3F8E00"};
+  background: ${(props) => props.bgColor || '#3F8E00'};
+  color: ${(props) => props.color || 'white'};
+  border: solid ${(props) => props.bgColor || '#3F8E00'};
   border-radius: 50px;
   font-size: 12px;
   font-weight: 700;
@@ -151,9 +151,9 @@ export const ContainerCardTestimonial = styled.div`
   flex-direction: column;
   align-items: start;
   gap: 1.5rem;
-  
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
+
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
   }
 `;
 export const ContainQuote = styled(FaQuoteLeft)`
@@ -170,11 +170,7 @@ export const ImgTestimonial = styled.img`
 export const ContainerCardTestimonialParent = styled.div`
   position: relative;
   border: 1px solid;
-  border-image-source: linear-gradient(
-    90deg,
-    #484848 1.24%,
-    rgba(27, 27, 27, 0) 100%
-  );
+  border-image-source: linear-gradient(90deg, #484848 1.24%, rgba(27, 27, 27, 0) 100%);
   border-image-slice: 1;
   padding: 30px;
 `;
@@ -186,28 +182,27 @@ export const ContainImgNameTesti = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  
-  @media(min-width: 320px) and (max-width: 767px){
-   flex-direction: ${(props) => (props.flexDirection ? "column" : "row")};
-  }
 
+  @media (min-width: 320px) and (max-width: 767px) {
+    flex-direction: ${(props) => (props.flexDirection ? 'column' : 'row')};
+  }
 `;
 export const ContainForm = styled.form`
-display: flex;
-justify-content: center;
- @media(min-width: 320px) and (max-width: 991px){
-   display: block;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 320px) and (max-width: 991px) {
+    display: block;
   }
-`
+`;
 export const ContainerInput = styled.div`
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: 100%; 
-  @media(min-width: 320px) and (max-width: 991px){
-   flex-direction: column;
-   width: 75%;
+  width: 100%;
+  @media (min-width: 320px) and (max-width: 991px) {
+    flex-direction: column;
+    width: 75%;
   }
 `;
 export const ContainLabel = styled.label`
@@ -242,8 +237,8 @@ export const IconCoeur = styled(FaHeart)`
   margin-bottom: -2px;
 `;
 export const ImgRecentWork = styled.img`
-width: 100%;
-`
+  width: 100%;
+`;
 export const ContainCardRW = styled.div`
-margin: 15px;
-`
+  margin: 15px;
+`;
