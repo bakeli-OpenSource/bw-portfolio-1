@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
-import { FaQuoteLeft } from 'react-icons/fa';
-import { FaHeart } from 'react-icons/fa';
+import { FaQuoteLeft, FaHeart, FaBars } from 'react-icons/fa';
 
 export const Container = styled.div`
   background: #080808;
@@ -33,6 +32,17 @@ export const HeaderContainer = styled.div`
     margin: 0px 7.25%;
   }
 `;
+export const ContainIconFaBars = styled.div`
+text-align: center;
+display: none;
+ @media (min-width: 320px) and (max-width: 991px) {
+    display: block;
+  }
+`
+export const IconFaBars = styled(FaBars)`
+color: #9c9c9c;
+font-size: 25px;
+`
 export const ContainElements = styled.div`
   display: flex;
   justify-content: center;
@@ -57,6 +67,11 @@ export const ContainElement = styled.div`
     gap: 37px;
   }
 `;
+export const ContainResponsive = styled.div`
+ @media (min-width: 320px) and (max-width: 991px) {
+    display: none;
+  }
+`
 export const ContainIcon = styled.div`
   display: flex;
   align-items: center;
@@ -78,9 +93,8 @@ export const ContainerCard = styled.div`
   align-items: ${(props) => (props.alignItems ? 'center' : 'start')};
   gap: ${(props) => (props.gap ? '0' : '2rem')};
   margin: ${(props) => (props.margin ? '22px' : '0')};
-
   @media (min-width: 320px) and (max-width: 991px) {
-    flex-direction: column;
+    align-items: center;
   }
 `;
 export const ContainTitle = styled.p`
@@ -89,6 +103,9 @@ export const ContainTitle = styled.p`
   margin: 0;
   font-size: ${(props) => props.large || '24px'};
   color: ${(props) => (props.color ? 'white' : '#080808')};
+  @media (min-width: 320px) and (max-width: 991px) {
+    text-align: center;
+  }
 `;
 export const ContainDescription = styled.p`
   font-size: 14px;
@@ -100,28 +117,44 @@ export const Img = styled.img`
   width: 25rem;
 
   @media (min-width: 320px) and (max-width: 991px) {
-    width: 15rem;
+    width: 100%;
   }
 `;
 export const ContainImageBanniere = styled.div`
   display: flex;
   justify-content: center;
+   @media (min-width: 320px) and (max-width: 991px) {
+    display: none;
+  }
+`;
+export const ContainImageBanniereMobile = styled.div`
+  display: none;
+  justify-content: center;
+   @media (min-width: 320px) and (max-width: 991px) {
+    display: ${(props) => (props.display ? 'block' : 'flex')};
+  }
 `;
 export const ContainLogo = styled.div`
   border: 1px solid #1b1b1b;
   border-radius: 6px;
   padding: 10px;
-  margin: 15px 0;
-  text-align: center;
+  margin: 15px 10px;
+      display: flex;
+    justify-content: center;
 `;
 export const ImgLogo = styled.img`
   max-width: 50%;
   min-width: 50%;
-  max-height: 100px;
   min-height: 26px;
+  @media (min-width: 320px) and (max-width: 991px) {
+   max-width: 40%;
+        min-width: 40%;
+        min-height: 56px;
+  }
 `;
 export const Button = styled.button`
   font-size: ${(props) => (props.large ? '16px' : '14px')};
+  font-family: 'IBM Plex Mono', monospace;
   color: white;
   font-weight: 700;
   display: flex;
@@ -130,10 +163,13 @@ export const Button = styled.button`
   gap: 10px;
   background: ${(props) => props.bgColor || '#3F8E00'};
   border-radius: 4px;
-  padding: 10px 24px;
+  padding: ${(props) => props.padding || '10px 24px'};
   border: solid ${(props) => props.bgColor || '#3F8E00'};
+  box-shadow: ${(props) => props.shadow || "0px 8px 30px 0px #3F8E004D"};
+  width: ${(props) => (props.width ? '100%' : '')};
 
-  @media (min-width: 320px) and (max-width: 991px) {
+  @media (min-width: 320px) and (max-width: 1024px) {
+  font-size: 12px;
   }
 `;
 export const TagParagraphe = styled.p`
@@ -187,13 +223,16 @@ export const ContainImgNameTesti = styled.div`
     flex-direction: ${(props) => (props.flexDirection ? 'column' : 'row')};
   }
 `;
-export const ContainForm = styled.form`
-  display: flex;
-  justify-content: center;
+export const ContainForm = styled.div`
+display: grid;
+grid-template-columns: repeat(12, 1fr);
   @media (min-width: 320px) and (max-width: 991px) {
     display: block;
   }
 `;
+export const FormContain = styled.div`
+grid-column: 4/span 6;
+`
 export const ContainerInput = styled.div`
   margin-bottom: 1rem;
   display: flex;
@@ -216,7 +255,7 @@ export const ContainInput = styled.input`
   background: white;
   color: #757575;
   border-radius: 4px;
-  width: 90%;
+  width: 95%;
 `;
 export const ContainTextarea = styled.textarea`
   border: 1px solid #d8d8d8;
@@ -224,7 +263,7 @@ export const ContainTextarea = styled.textarea`
   background: white;
   color: #757575;
   border-radius: 4px;
-  width: 90%;
+  width: 95%;
 `;
 export const ContainFooter = styled.div`
   background: #1b1b1b;

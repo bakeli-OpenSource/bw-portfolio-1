@@ -2,27 +2,10 @@ import React from 'react';
 import CardInfo from '../Banniere/CardInfo';
 import { ContainerParent, ImgRecentWork, ContainPaddingT } from '../../Style/styleAccueil';
 import Card from '../Banniere/Card';
-import Slider from 'react-slick';
 import { TestimonialsData } from '../../data/banniere';
+import Carrousel from '../Carrousel';
 
 function RecentWork() {
-  let settings = {
-    dots: false,
-    infinite: false,
-    // speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false
-        }
-      }
-    ]
-  };
 
   return (
     <ContainerParent padding>
@@ -33,8 +16,8 @@ function RecentWork() {
         }
       />
       <ContainPaddingT>
-        <Slider {...settings}>
-          {TestimonialsData.map((item, index) => {
+        <Carrousel infinite={false}>
+        {TestimonialsData.map((item, index) => {
             return (
               <Card
                 margin
@@ -47,7 +30,7 @@ function RecentWork() {
               </Card>
             );
           })}
-        </Slider>
+        </Carrousel>
       </ContainPaddingT>
     </ContainerParent>
   );
