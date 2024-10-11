@@ -7,14 +7,15 @@ import {
   ContainerParent,
   ContainDescription,
   ContainImgNameTesti,
-  Img,
+  Img, ContainResponsive,
   ContainImageBanniere,
-  ContainPaddingT
+  ContainPaddingT, ContainImageBanniereMobile
 } from '../../Style/styleAccueil';
 import Card from './Card';
 import ImageBanniere from '../../assets/Images/ImageBanniere.png';
 import Logo from './Logo';
 import { LogoBanniere } from '../../data/banniere';
+import Carrousel from '../Carrousel';
 
 function Banniere() {
   return (
@@ -24,6 +25,9 @@ function Banniere() {
       </Router>
       <ContainerParent>
         <ContainElements>
+        <ContainImageBanniereMobile>
+            <Img src={ImageBanniere} alt="Une image" />
+          </ContainImageBanniereMobile>
           <Card
             color
             large="44px"
@@ -33,6 +37,8 @@ function Banniere() {
             }
             nameButton={'Let’s get started'}
             bgColor={'#3F8E00'}
+            shadow={"0px 8px 30px 0px #3F8E0080"}
+            padding={"21px 64px"} largeButton
           />
           <ContainImageBanniere>
             <Img src={ImageBanniere} alt="Une image" />
@@ -40,11 +46,20 @@ function Banniere() {
         </ContainElements>
         <ContainPaddingT paddingTop>
           <ContainDescription>Worked with</ContainDescription>
+          <ContainResponsive>
           <ContainImgNameTesti flexDirection>
-            {LogoBanniere.map((item) => {
+          {LogoBanniere.map((item) => {
               return <Logo key={item.id} Image={item.image} />;
             })}
           </ContainImgNameTesti>
+          </ContainResponsive>
+          <ContainImageBanniereMobile display>
+            <Carrousel infinite={true} arrows autoplay>
+            {LogoBanniere.map((item) => {
+              return <Logo key={item.id} Image={item.image} />;
+            })}
+            </Carrousel>
+          </ContainImageBanniereMobile>
         </ContainPaddingT>
       </ContainerParent>
     </Container>

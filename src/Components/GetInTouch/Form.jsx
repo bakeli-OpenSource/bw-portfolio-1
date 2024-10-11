@@ -1,29 +1,30 @@
 import React from 'react';
-import { ContainerCard, ContainerInput, ContainForm } from '../../Style/styleAccueil';
+import { ContainerCard, ContainerInput, ContainForm, FormContain } from '../../Style/styleAccueil';
 import Input from '../Banniere/Input';
 import Bouton from '../Banniere/Bouton';
 
 function Form() {
   return (
-    <div>
-      <ContainForm>
+    <ContainForm>
+      <FormContain>
+      <form>
         <ContainerCard alignItems gap>
           <Input namelabel={'Email'} placeholder={'Please enter your email'} id={'email'} />
           <Input namelabel={'Mobile'} placeholder={'Enter mobile'} id={'mobile'} />
           <Input
             namelabel={'Message'}
             area
-            rows={'6'}
-            cols={'30'}
+            rows={'5'}
             placeholder={'Enter your message'}
             id={'message'}
           />
           <ContainerInput>
-            <Bouton name={'Submit'} />
+            <Bouton name={'Submit'} padding={"16px 24px"} width/>
           </ContainerInput>
         </ContainerCard>
-      </ContainForm>
-    </div>
+      </form>
+      </FormContain>
+    </ContainForm>
   );
 }
 

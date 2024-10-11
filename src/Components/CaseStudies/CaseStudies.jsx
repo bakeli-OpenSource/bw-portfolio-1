@@ -25,6 +25,7 @@ function CaseStudies() {
             }
             nameButton={'View case study'}
             bgColor={'#FFA217'}
+            shadow={"0px 8px 30px 0px #FFA2171A"}
           >
             <Tag name={'Fintech'} bgTag="#FFF6E9" colorTag="#FFA217" />
           </Card>
@@ -41,6 +42,7 @@ function CaseStudies() {
             }
             nameButton={'View case study'}
             bgColor={'#000AFF'}
+            shadow={"0px 8px 30px 0px #000AFF1A"}
           >
             <Tag name={'EdTech'} bgTag="#D0E6FF" colorTag="#000AFF" />
           </Card>
@@ -55,6 +57,7 @@ function CaseStudies() {
             }
             nameButton={'View case study'}
             bgColor={'#2AB090'}
+            shadow={"0px 8px 30px 0px #2AB0901A"}
           >
             <Tag name={'Pharma'} bgTag="#E0FFF8" colorTag="#2AB090" />
           </Card>
